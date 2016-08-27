@@ -1,6 +1,6 @@
-;;; gdscript-mode.el --- Provide a major mode for GDScript.
+;;; gdscript.el --- Provide a major mode for GDScript.
 
-(defvar gdscript-mode-map
+(defvar gdscript-map
   (let ((map (make-sparse-keymap)))
     (define-key map [remap newline-and-indent] 'gdscript-newline-and-indent) map))
 
@@ -101,13 +101,13 @@
     ))
 
 
-(define-derived-mode gdscript-mode fundamental-mode "GDScript"
+(define-derived-mode gdscript fundamental-mode "GDScript"
   (setq-local indent-line-function 'gdscript-indent-line)
   (setq-local comment-start "# ")
   (setq-local comment-end "")
   (set-syntax-table gdscript-syntax-table)
   (setq-local font-lock-defaults '(gdscript-font-lock)))
 
-(provide 'gdscript-mode)
+(provide 'gdscript)
 
-(add-to-list 'auto-mode-alist '("\\.gd\\'" . gdscript-mode))
+(add-to-list 'auto-mode-alist '("\\.gd\\'" . gdscript))
