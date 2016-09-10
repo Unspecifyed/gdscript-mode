@@ -20,10 +20,59 @@
 
 ;;Syntax highlighting
 (defvar gdscript-builtin-words
-  '("Vector2" "Rect2" "Vector3" "Matrix32" "Plane" "Quat" "AABB" "Matrix3" "Transform"))
+  '("Vector2"
+    "Rect2"
+    "Vector3"
+    "Matrix32"
+    "Plane"
+    "Quat"
+    "AABB"
+    "Matrix3"
+    "Transform"
+    "null"
+    "bool"
+    "int"
+    "float"
+    "String"
+    "Color"
+    "Image"
+    "NodePath"
+    "RID"
+    "Object"
+    "InputEvent"
+    "ByteArray"
+    "IntArray"
+    "FloatArray"
+    "StringArray"
+    "Vector2Array"
+    "Vector3Array"
+    "ColorArray"
+    "yield"))
 
 (defvar gdscript-keywords
-  '("func" "const" "var" "if" "else" "elif" "for" "while" "return" "class" "extends"))
+  '("func"
+    "const"
+    "var"
+    "if"
+    "else"
+    "elif"
+    "for"
+    "while"
+    "return"
+    "class"
+    "extends"
+    "switch"
+    "case"
+    "break"
+    "continue"
+    "pass"
+    "tool"
+    "signal"
+    "static"
+    "onready"
+    "export"
+    "setget"
+    "breakpoint"))
 
 (defun regex-maker (words)
   (regexp-opt words 'symbols))
